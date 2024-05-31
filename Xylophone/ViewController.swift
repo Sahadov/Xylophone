@@ -33,12 +33,17 @@ class ViewController: UIViewController {
         
         
     }
-    
+    /*
     func playSound(soundName: String) {
             let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
             player = try! AVAudioPlayer(contentsOf: url!)
             player.play()
             
+    }*/
+    func playSound(_ buttonText: String) {
+        guard let url = Bundle.main.url(forResource: buttonText, withExtension: "wav") else { return }
+        player = try! AVAudioPlayer(contentsOf: url)
+        player?.play()
     }
     
     private func createButtons(){
@@ -67,7 +72,8 @@ class ViewController: UIViewController {
     }
     
     @objc private func buttonTapped(_ sender: UIButton){
-        playSound(soundName: sender.currentTitle!)
+        guard let buttonText = sender.currentTitle else { return }
+        playSound(buttonText)
         
     }
 

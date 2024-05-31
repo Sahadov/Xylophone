@@ -12,9 +12,7 @@
 		D19C7AB02C07D679008D0B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C7AAF2C07D679008D0B46 /* ViewController.swift */; };
 		D19C7AB52C07D67D008D0B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D19C7AB42C07D67D008D0B46 /* Assets.xcassets */; };
 		D19C7AB82C07D67D008D0B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C7AB62C07D67D008D0B46 /* LaunchScreen.storyboard */; };
-		D19C7AC32C07D67E008D0B46 /* XylophoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C7AC22C07D67E008D0B46 /* XylophoneTests.swift */; };
-		D19C7ACD2C07D67E008D0B46 /* XylophoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C7ACC2C07D67E008D0B46 /* XylophoneUITests.swift */; };
-		D19C7ACF2C07D67E008D0B46 /* XylophoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C7ACE2C07D67E008D0B46 /* XylophoneUITestsLaunchTests.swift */; };
+		D1DA7FEF2C0A6B3200D15085 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = D1DA7FEE2C0A6B3200D15085 /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +41,8 @@
 		D19C7AB72C07D67D008D0B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D19C7AB92C07D67D008D0B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D19C7ABE2C07D67E008D0B46 /* XylophoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XylophoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D19C7AC22C07D67E008D0B46 /* XylophoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XylophoneTests.swift; sourceTree = "<group>"; };
 		D19C7AC82C07D67E008D0B46 /* XylophoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XylophoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D19C7ACC2C07D67E008D0B46 /* XylophoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XylophoneUITests.swift; sourceTree = "<group>"; };
-		D19C7ACE2C07D67E008D0B46 /* XylophoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XylophoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1DA7FEE2C0A6B3200D15085 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../Downloads/Xylophone-iOS13-master/Xylophone/Sounds"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				D19C7AAA2C07D679008D0B46 /* Xylophone */,
-				D19C7AC12C07D67E008D0B46 /* XylophoneTests */,
-				D19C7ACB2C07D67E008D0B46 /* XylophoneUITests */,
 				D19C7AA92C07D679008D0B46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,25 +97,9 @@
 				D19C7AB42C07D67D008D0B46 /* Assets.xcassets */,
 				D19C7AB62C07D67D008D0B46 /* LaunchScreen.storyboard */,
 				D19C7AB92C07D67D008D0B46 /* Info.plist */,
+				D1DA7FEE2C0A6B3200D15085 /* Sounds */,
 			);
 			path = Xylophone;
-			sourceTree = "<group>";
-		};
-		D19C7AC12C07D67E008D0B46 /* XylophoneTests */ = {
-			isa = PBXGroup;
-			children = (
-				D19C7AC22C07D67E008D0B46 /* XylophoneTests.swift */,
-			);
-			path = XylophoneTests;
-			sourceTree = "<group>";
-		};
-		D19C7ACB2C07D67E008D0B46 /* XylophoneUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D19C7ACC2C07D67E008D0B46 /* XylophoneUITests.swift */,
-				D19C7ACE2C07D67E008D0B46 /* XylophoneUITestsLaunchTests.swift */,
-			);
-			path = XylophoneUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DA7FEF2C0A6B3200D15085 /* Sounds in Resources */,
 				D19C7AB82C07D67D008D0B46 /* LaunchScreen.storyboard in Resources */,
 				D19C7AB52C07D67D008D0B46 /* Assets.xcassets in Resources */,
 			);
@@ -264,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D19C7AC32C07D67E008D0B46 /* XylophoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D19C7ACD2C07D67E008D0B46 /* XylophoneUITests.swift in Sources */,
-				D19C7ACF2C07D67E008D0B46 /* XylophoneUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
