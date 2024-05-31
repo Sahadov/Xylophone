@@ -10,7 +10,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var player: AVAudioPlayer!
+    var player: AVAudioPlayer?
     
     private let buttonTitles = ["A", "B", "C", "D", "F", "G", "E", "D"]
     private let buttonColors = [UIColor(red: 213/255, green: 62/255, blue: 79/255, alpha: 1.0),
@@ -33,17 +33,17 @@ class ViewController: UIViewController {
         
         
     }
-    /*
-    func playSound(soundName: String) {
-            let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
-            player = try! AVAudioPlayer(contentsOf: url!)
-            player.play()
-            
-    }*/
+    
     func playSound(_ buttonText: String) {
         guard let url = Bundle.main.url(forResource: buttonText, withExtension: "wav") else { return }
         player = try! AVAudioPlayer(contentsOf: url)
         player?.play()
+    }
+    
+    @objc private func buttonTapped(_ sender: UIButton){
+        guard let buttonText = sender.currentTitle else { return }
+        playSound(buttonText)
+        
     }
     
     private func createButtons(){
@@ -71,11 +71,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 16
     }
     
-    @objc private func buttonTapped(_ sender: UIButton){
-        guard let buttonText = sender.currentTitle else { return }
-        playSound(buttonText)
-        
-    }
+   
 
 
 }
